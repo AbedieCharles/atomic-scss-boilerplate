@@ -1,0 +1,145 @@
+.o-Job {
+
+  &__list {
+    @include rem(padding, ($space-xlarge) 0);
+  }
+
+  &__item-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $clr-white;
+    @include rem(padding, $space-large $space-large + 2);
+    transition: background $animate-quick ease;
+    @include rem(margin-bottom, 0);
+    position: relative;
+  }
+
+  .left {
+    flex: 2;
+  }
+
+  i {
+    position: relative;
+    top: 1px;
+    // margin-right: 5px;
+    line-height: 1;
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    // @include rem(padding-left, map-get($spacing, M));
+  }
+
+
+  .job-link {
+    display: block;
+    position: relative;
+    margin-bottom: 1px;
+    color: $clr-black;
+
+
+    &:hover {
+      .o-Job__item-wrapper {
+        background-color: $clr-link;
+      }
+
+      * {
+        color: $clr-white;
+        opacity: 1;
+      }
+    }
+  }
+
+  .job-title {
+    // color: $black;
+    margin: 0;
+    @include rem(font-size, $font-size-large);
+    // font-weight: 700;
+    letter-spacing: 0;
+    // font-size: 20px;
+  }
+
+  .job-category {
+    opacity: 0.4;
+    // color: $black;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+    // font-family: $font-family-sans;
+  }
+
+  .job-type {
+    // padding: 5px 20px;
+    // background-color: $blue;
+    text-align: right;
+    // color: $black;
+    // font-size: 12px;
+  }
+
+  .job-date {
+    @include rem(font-size, $font-size-small);
+    opacity: 0.4;
+    margin: 5px 0;
+  }
+
+  .job-description {
+    // line-height: 1.4;
+    // font-size: 12px;
+  }
+}
+
+
+// single job post
+.single-jobpost-header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  // @include rem(margin-bottom, map-get($spacing, L));
+  // background-color: $white;
+  padding: 20px;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    background-color: $clr-coral;
+    width: 20px;
+    bottom: 0;
+  }
+
+  .job-detail {
+    width: 100%;
+    text-align: center;
+  }
+
+  /*
+  .job-type,
+  .job-date {
+    margin: 0 10px;
+    font-size: 10px;
+    opacity: 0.4;
+    color: $clrblack;
+
+    i {
+      line-height: 1;
+      margin-right: 5px;
+    }
+  }
+  */
+
+  .job-title {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+}

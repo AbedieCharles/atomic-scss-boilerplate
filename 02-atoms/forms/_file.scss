@@ -1,0 +1,17 @@
+.upload-file {
+  @include rem(width, 40px);
+  @include rem(height, 40px);
+  float: left;
+  color: $clr-coral;
+  margin-right: 10px;
+  border: 2px solid $clr-coral;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+
+   i {
+     line-height: 1;
+   }
+}

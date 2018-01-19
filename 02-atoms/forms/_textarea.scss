@@ -1,0 +1,15 @@
+/*=============================================
+=TEXTAREA
+=============================================*/
+textarea {
+  width: 100%;
+	min-height: 200px;
+  height: auto;
+  font-family: $font-family-sans;
+  padding: $space;
+	display: block;
+	overflow: hidden;
+	border-color: #ECEFF1;
+	border-radius: 2px;
+	resize:none;
+}

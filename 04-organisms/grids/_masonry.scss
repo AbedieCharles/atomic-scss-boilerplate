@@ -1,0 +1,82 @@
+/*=============================================
+=MASONRY
+=============================================*/
+.o-grid--masonry {
+  // display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  //grid-auto-rows: 280px;
+  //grid-auto-flow: dense;
+  grid-gap: $space-small;
+  @include reset-list();
+  @include rem(padding, ($space-xlarge) 0);
+
+  &.partners {
+    display: block;
+    column-count: 3;
+    column-gap: $space;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+
+    .o-grid__item {
+      @include rem(margin-bottom, $space);
+    }
+  }
+}
+
+.o-grid--saegusien {
+  @include reset-list();
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @include MQ(XS) {
+    flex-direction: column;
+  }
+
+  .o-grid__item {
+    width: calc(33.33333% - 10px);
+    margin: 10px 5px;
+
+    @include MQ(XS) {
+      width: 100%;
+    }
+
+    @include MQ(MD) {
+      width: calc(25% - 10px);
+    }
+
+    &:nth-child(odd) {
+      //transform: translateY(-20px);
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .a-spinner--grid {
+    position: fixed;
+    z-index: map-get($zindex, main) + 1;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+    .a-spinner__item {
+      background-color: $clr-coral;
+    }
+
+    &.is-visible {
+      opacity: 1;
+    }
+  }
+
+  .m-card--icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+    padding: $space-xlarge $space;
+    @include rem(margin-bottom, $space);
+  }
+}

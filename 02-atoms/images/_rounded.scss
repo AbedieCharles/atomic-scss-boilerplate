@@ -1,0 +1,9 @@
+.a-image--rounded {
+  width: 90px;
+  height: 90px;
+  display: inline-block;
+  border-radius: 100%;
+  @include background-full();
+  @include rem(margin, $space 0);
+  overflow: hidden;
+}

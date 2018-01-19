@@ -1,0 +1,13 @@
+.a-brand-logo {
+  width: 50%;
+  display: block;
+
+  @include MQ(MD) {
+    width: 35%;
+    
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}

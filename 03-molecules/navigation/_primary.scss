@@ -1,0 +1,60 @@
+/*=============================================
+=PRIIMARY MENU
+=============================================*/
+.m-primary-nav {
+  display: inline-flex;
+  flex-direction: column;
+  @include reset-list();
+
+  &__item {
+    display: inline-block;
+    position: relative;
+    line-height: 1;
+    color: $clr-white;
+    @include rem(margin-bottom, $space-xlarge);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include MQ(MD) {
+      @include rem(margin-bottom, $space-xlarge);
+    }
+
+    &.active {
+      color: $clr-coral;
+      pointer-events: none;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    display: inline-block;
+    font-family: $font-family-heading;
+    @include rem(font-size, ($font-size-large + 8));
+    transform: translateX(150%);
+
+    &:before {
+      position: absolute;
+      bottom: -10px;
+      width: 100%;
+      height: 4px;
+      border-radius: 10px;
+      content: '';
+      transition: transform $animate-normal ease;
+      transform: scaleX(0);
+      transform-origin: 100% 0;
+      background: $clr-coral;
+    }
+
+    &:hover {
+      &:before {
+        transform: scaleX(1);
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

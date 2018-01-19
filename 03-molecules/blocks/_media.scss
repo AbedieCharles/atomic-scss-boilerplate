@@ -1,0 +1,42 @@
+/*=============================================
+=MEDIA (image and content)
+=============================================*/
+.m-media {
+  display: flex;
+  align-items: center;
+
+  @include MQ(SM) {
+    flex-direction: column;
+  }
+
+  
+  &--reverse {
+    @extend .m-media;
+    flex-direction: row-reverse;
+
+    @include MQ(SM) {
+      flex-direction: column;
+    }
+    
+  }
+
+  &__image,
+  &__content {
+    
+    flex: 1;
+    @include MQ(MD) {
+      width: 50%;
+    }
+  }
+
+  &__content {
+
+    @include MQ(SM) {
+      @include rem(padding, 0 $space-large);
+    }
+
+    @include MQ(MD) {
+      @include rem(padding, 0 $space-xlarge);
+    }
+  }
+}

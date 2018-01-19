@@ -1,0 +1,28 @@
+// Media Queries
+@mixin MQ($class) {
+  @if $class == XS {
+    @media (max-width: 767px) { @content; }
+  }
+ 
+  @else if $class == SM {
+    @media (min-width: 768px) and (max-width: 1199px) { @content; }
+  }
+ 
+  @else if $class == MD {
+    @media (min-width: 1200px) { @content; }
+  }
+ 
+  @else if $class == XL {
+    @media (min-width: 1921px) { @content; }
+  }
+
+  @else if $class == retina {
+    @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}

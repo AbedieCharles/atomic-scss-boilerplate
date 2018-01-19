@@ -1,0 +1,63 @@
+
+/*=============================================
+=SPINNER - CIRCLE
+=============================================*/
+.a-spinner {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 2px solid rgba($clr-white, 0.5);
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+
+  // Basic
+  &:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    border-top-color: lime;
+    animation: spinner $animate-normal linear infinite;
+  }
+
+  // Multiple circles
+  &--circles {
+    @extend .a-spinner;
+    border: 2px solid transparent;
+    border-top-color: lime;
+    animation: spinner 1s linear infinite;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      border-radius: 100%;
+      border: 2px solid transparent;
+      border-top-color: lime;
+      animation: spinner 5s linear infinite;
+      opacity: 0.8;
+    }
+    
+    &:after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+      border-radius: 100%;
+      border: 2px solid transparent;
+      border-top-color: lime;
+      animation: spinner 10s linear infinite;
+      opacity: 0.5;
+    }
+  }
+}

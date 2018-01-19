@@ -1,0 +1,112 @@
+/*=============================================
+=MENU BURGER
+=============================================*/
+.a-burger-menu {
+  display: block;
+  position: relative;
+  width: $icon-menu-size;
+  height: $icon-menu-size;
+  border-radius: 50%;
+  background-color: transparent;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    span:before { transform: translateY(-9px); }
+    span:after { transform: translateY(9px); }
+  }
+
+  // Icon burger 
+  span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 10px;
+    width: $icon-menu-size / 2;
+    height: 2px;
+    display: block;
+    transition: transform $animate-normal ;
+    background-color: $clr-white;
+
+    &:before,
+    &:after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: $icon-menu-size / 2;
+      border-radius: 10px;
+      height: 2px;
+
+      content: "";
+      transition: transform $animate-normal;
+      // border-radius: 10px;
+      background-color: $clr-white;
+    }
+    &:before { transform: translateY(-8px); }
+    &:after { transform: translateY(8px); }
+  }
+
+  &-icon-svg {
+    span {
+      transition: background $animate-normal steps(1, end);
+    }
+  
+    span:before,
+    span:after {
+      transform-origin: 100% 50%;
+    }
+  
+    svg {
+      opacity: 0;
+      fill : transparent;
+      stroke-width: 2px;
+      stroke: $clr-white;
+      stroke-dasharray: 22 230;
+      transition: stroke-dasharray $animate-normal , 
+                  stroke-dashoffset $animate-normal, 
+                  opacity $animate-normal steps(1, end);
+    }
+  
+  
+    // States
+    &.is-opened {
+      
+      span {
+        transition: background $animate-normal steps(1, start);
+        background-color: transparent;
+  
+        &:before,
+        &:after {
+          background-color: $clr-white;
+        }
+  
+        &:before {
+          transform: translateX(-3px) translateY(-9px) rotate(-45deg);
+        }
+        &:after {
+          transform: translateX(-3px) translateY(10px) rotate(45deg);
+        }
+      }
+  
+      svg {
+        stroke: $clr-white;
+        animation-name: pathAnimation;
+        animation-duration: $animate-normal;
+        animation-timing-function: linear;
+        animation-fill-mode: backwards;
+        transition: stroke-dasharray .4s ease, 
+                    stroke-dashoffset .5s ease, 
+                    opacity .750s steps(1, start);
+      }
+    }
+  
+    &.is-closed {
+      svg {
+        animation: pathAnimationOut .750s linear;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+/*=============================================
+=SOCIAL SHARE
+=============================================*/
+.m-social-share {
+  @include reset-list();
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    @include rem(margin-bottom, $space);
+  }
+
+  &__link {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.Social-share {
+  position: fixed;
+  z-index: 900000;
+  top: 50%;
+  right: 5%;
+  display: flex;
+  flex-direction: column;
+  transition: opacity .4s ease-in;
+  opacity: 0;
+
+
+  &.is-visible {
+    transition: opacity .2s ease-out;
+    opacity: 1;
+  }
+
+  &__item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all .450s;
+
+    color: $clr-blue;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    outline: none;
+    background-color: transparent;
+
+    @include rem(font-size, 16px);
+    @include rem(margin-bottom, 10px);
+    @include rem(width, 40px);
+    @include rem(height, 40px);
+
+    span[class^='jam-'] {
+      display: flex;
+    }
+
+    &:hover {
+      animation: saegus-pulse 2s alternate;
+
+      color: $clr-coral;
+    }
+  }
+
+}

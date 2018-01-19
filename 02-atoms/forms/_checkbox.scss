@@ -1,0 +1,44 @@
+/*=============================================
+=CHECKBOX
+=============================================*/
+input[type="checkbox"] {
+  appearance: none;
+  @include rem(width, $checkbox-size);
+  @include rem(height, $checkbox-size);
+  border: 2px solid $clr-blue;
+  border-radius: $border-radius;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: all $animate-quick;
+  text-align: center;
+  line-height: $checkbox-size;
+
+  &:before {
+    font-family: "jam-icons";
+    content: '\3f';
+    font-size: 90%;
+    line-height: 0;
+    opacity: 0;
+  }
+
+  &:hover {
+    border-color: $clr-coral;
+  }
+
+
+  &:checked {
+    border-color: $clr-coral;
+    color: $clr-coral;
+    animation: pulse $animate-normal;
+
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+  }
+}

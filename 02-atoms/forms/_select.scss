@@ -1,0 +1,38 @@
+/*=============================================
+=SELECT
+=============================================*/
+.a-select-wrapper {
+  display: block;
+  position: relative;
+
+  &:after {
+    content: '\67';
+    font-family: "jam-icons";
+    position: absolute;
+    @include rem(width, $input-size);
+    @include rem(line-height, $input-size);
+    @include rem(font-size, $font-size-small);
+    top: 0;
+    pointer-events: none;
+    right: 0;
+    text-align: center;
+    height: 100%;
+    color: $clr-black;
+  }
+}
+
+select {
+  appearance: none;
+  width: 100%;
+  @include rem(min-width, 100px);
+  @include rem(height, $input-size);
+  @include rem(line-height, $input-size);
+  border: none;
+  outline: none;
+  border-radius: 0;
+  background-color: transparent;
+  border-bottom: 2px solid $clr-black;
+  font-family: $font-family-sans;
+  @include rem(padding, 0 $input-size $space-small 0);
+}
+

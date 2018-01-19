@@ -1,0 +1,24 @@
+/*=============================================
+=AVATAR
+=============================================*/
+.a-progress-bar {
+  background-color: rgba($clr-white, 0.5);
+  border-radius: $border-radius-md;
+  height: 5px;
+
+  &__status {
+    width: 80%;
+    height: 100%;
+    transition: width $animate-quick;
+    animation: progress-bar 5s backwards infinite;
+  }
+
+  &--white {
+    @extend .a-progress-bar;
+
+    .a-progress-bar__status {
+      background-color: $clr-white;
+      border-radius: $border-radius-md;
+    }
+  }
+}

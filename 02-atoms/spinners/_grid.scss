@@ -1,0 +1,47 @@
+/*=============================================
+=SPINNER - GRID
+=============================================*/
+
+/**
+*
+*   <div class="a-spinner--grid">
+*     <span class="a-spinner__item a-spinner__item-1"></span>
+*     <span class="a-spinner__item a-spinner__item-2"></span>
+*     <span class="a-spinner__item a-spinner__item-3"></span>
+*     <span class="a-spinner__item a-spinner__item-4"></span>
+*     <span class="a-spinner__item a-spinner__item-5"></span>
+*     <span class="a-spinner__item a-spinner__item-6"></span>
+*     <span class="a-spinner__item a-spinner__item-7"></span>
+*     <span class="a-spinner__item a-spinner__item-8"></span>
+*     <span class="a-spinner__item a-spinner__item-9"></span>
+*   </div>
+*
+*/
+
+$delay: 0.4s;
+
+.a-spinner--grid {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  position: relative;
+
+  .a-spinner__item {
+    display: block;
+    width: unquote((100 / 3) + "%");
+    height: unquote((100 /3) + "%");
+    background-color: white;
+    float: left;
+    animation: cube-grid 2s infinite ease-in-out;
+
+    &-1 { animation-delay: $delay * 0.50 }
+    &-2 { animation-delay: $delay * 0.75 }
+    &-3 { animation-delay: $delay }
+    &-4 { animation-delay: $delay * 0.25 }
+    &-5 { animation-delay: $delay * 0.50 }
+    &-6 { animation-delay: $delay * 0.75 }
+    &-7 { animation-delay: 0.0s }
+    &-8 { animation-delay: $delay * 0.25 }
+    &-9 { animation-delay: $delay * 0.50 }
+  }
+}

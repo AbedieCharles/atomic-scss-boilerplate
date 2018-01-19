@@ -1,0 +1,62 @@
+/*=============================================
+=THUMBNAIL
+=============================================*/
+.o-grid--thumbnail {
+  @include reset-list();
+  @include rem(padding, ($space-xlarge + 2) 0);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include MQ(XS) {
+    flex-direction: row;
+  }
+
+  .o-grid__item {
+    width: calc(25% - #{$space-xlarge});
+    @include rem(margin-bottom, $space-xlarge);
+
+  }
+
+  &.logos {
+    justify-content: flex-start;
+    align-items: center;
+
+    @include MQ(XS) {
+      justify-content: space-between;
+    }
+
+    .o-grid__item {
+      width: 20%;
+      @include rem(padding, 0 $space-xlarge);
+      @include rem(margin-bottom, $space-xlarge);
+
+      @include MQ(XS) {
+        width: 33%;
+        @include rem(padding, 0 $space-large);
+      }
+
+      @include MQ(SM) {
+        width: 25%;
+      }
+    }
+  }
+}
+
+.o-latest-posts {
+  display: flex;
+
+  .m-card--full-image {
+    flex: 1;
+    @include rem(height, 250px);
+  }
+
+  .m-card__image {
+    @include rem(height, 250px); 
+  }
+
+  .m-card__content {
+    @include rem(padding-bottom, $space-large);
+  }
+}

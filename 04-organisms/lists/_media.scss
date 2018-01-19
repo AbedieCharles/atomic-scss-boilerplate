@@ -1,0 +1,61 @@
+/*=============================================
+=MEDIA
+=============================================*/
+.o-list--media {
+  @include reset-list();
+  @include rem(padding, ($space-xlarge + 4) 0);
+
+  @include MQ(XS) {
+    @include rem(padding, $space-xlarge 0); 
+  }
+
+  .m-media {
+    @include rem(margin-bottom, ($space-xlarge + 5));
+
+    @include MQ(XS) {
+      @include rem(margin-bottom, $space-xlarge);
+      flex-direction: column;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--reverse {
+      .m-media__image {
+        @include MQ(MD) {
+          img { 
+            transform: translateX(6vw); 
+          }
+        }
+      }
+    }
+
+    &__image {
+
+      @include MQ(XS) {
+        @include rem(margin-bottom, $space);
+      }
+
+      img {
+        border-radius: 6px;
+        box-shadow: 0 0 30px $clr-shadow;
+        transform: translateX(-18vw);
+
+        @include MQ(XS) {
+          transform: none;
+        }
+
+        @include MQ(SM) {
+          width: 100%;
+          transform: none;
+        }
+
+        @include MQ(MD) {
+          width: calc(100% + 15vw);
+          max-width: none;
+        }
+      }
+    }
+  }
+}

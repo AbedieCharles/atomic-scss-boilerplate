@@ -1,0 +1,35 @@
+/*=============================================
+=NAVBAR
+=============================================*/
+.m-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  @include rem(height, $navbar-height);
+  // background-color: $clr-black-light;
+  z-index: map-get($zindex, navbar);
+  @include rem(padding, ($navbar-height / 2) 0);
+  transition: background $animate-normal, transform $animate-quick linear;
+
+
+  &__container {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+
+    @include MQ(MD) {
+      @include rem(width, $container-MD);
+      padding: 0;
+    }
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+}

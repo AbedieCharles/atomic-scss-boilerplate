@@ -1,0 +1,36 @@
+/*=============================================
+=THUMBNAIL
+=============================================*/
+.a-thumb {
+  background-color: $clr-black-lighten;
+
+  // Style
+  &--rounded {
+    border-radius: $border-radius;
+  }
+
+  &--circle {
+    border-radius: 100%;
+  }
+
+  // Sizes
+  &--medium {
+    @extend .a-thumb;
+    @include rem(width, 80px);
+    @include rem(height, 80px);
+  }
+
+
+  &--large {
+    @extend .a-thumb;
+    @include rem(width, 128px);
+    @include rem(height, 128px);
+  }
+
+  &--super-large {
+    @extend .a-thumb;
+    @include rem(width, 160px);
+    @include rem(height, 160px);
+  }
+
+}

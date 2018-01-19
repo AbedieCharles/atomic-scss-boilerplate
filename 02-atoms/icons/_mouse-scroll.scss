@@ -1,0 +1,26 @@
+/*=============================================
+=MOUSE SCROLL
+=============================================*/
+.a-mouse-scroll {
+  position: relative;
+  display: block;
+  @include rem(width, 25px);
+  @include rem(height, 45px);
+  text-align: center;
+  border: 2px solid #fff;
+  border-radius: 80px;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 2px;
+    height: 8px;
+    content: '';
+    transform: translateX(-50%);
+    animation: $animate-slow ease-in infinite wheel-up-down;
+    border-radius: 30px;
+    background-color: $clr-white;
+  }
+}

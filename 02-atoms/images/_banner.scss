@@ -1,0 +1,8 @@
+/*=============================================
+=BANNER
+=============================================*/
+.a-banner {
+  width: 100%;
+  background-color: $clr-black-lighten;
+  @include rem(height, 400px);
+}

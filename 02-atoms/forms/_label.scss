@@ -1,0 +1,13 @@
+/*=============================================
+=LABEL
+=============================================*/
+label,
+.a-label {
+  display: block;
+  font-weight: 700;
+  line-height: 1;
+
+  &[for] {
+		cursor: pointer;
+	}
+}

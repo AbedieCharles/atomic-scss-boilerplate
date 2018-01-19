@@ -1,0 +1,55 @@
+.wpcf7-mail-sent-ng,
+.wpcf7-validation-errors {
+  background-color: rgba($clr-black, 0.2);
+  margin-top: $space-small !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.wpcf7-mail-sent-ng {
+  border: none !important;
+  border-bottom: 2px solid $clr-error !important;
+}
+
+.wpcf7-validation-errors {
+  border-color: $clr-error !important;
+}
+
+.wpcf7-not-valid-tip {
+  @include rem(margin, $space 0);
+  font-size: $font-size-small !important;
+}
+
+
+input.wpcf7-not-valid {
+  border-color: $clr-error !important;
+}
+
+
+.p--contact {
+
+  .wpcf7-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .m-form-group {
+      width: 48%;
+      @include rem(margin-bottom, $space-xlarge);
+
+      &--textarea {
+        width: 100%;
+      }
+
+      &--button {
+        width: 100%;
+        text-align: right;
+      }
+    }
+  }
+
+  .wpcf7-mail-sent-ng {
+    width: 100%;
+    text-align: center;
+  }
+}

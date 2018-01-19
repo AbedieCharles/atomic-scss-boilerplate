@@ -1,0 +1,29 @@
+/*=============================================
+=AVATAR
+=============================================*/
+.a-avatar {
+  background-color: $clr-white;
+  
+  // Sizes
+  &--md {
+    @include rem(width, 80px);
+    @include rem(height, 80px);
+  }
+
+  &--xl {
+    @include rem(width, 150px);
+    @include rem(height, 150px);
+  }
+  
+  // Styles
+  &--round {
+    @extend .a-avatar;
+    border-radius: 100%;
+  }
+
+  &--square {
+    @extend .a-avatar;
+    border-radius: 6px;
+  }
+  
+}

@@ -1,0 +1,15 @@
+/*=============================================
+=BASE
+=============================================*/
+.t-single-post {
+  font-family: $font-family-serif;
+  @include rem(padding-bottom, $space-xxlarge);
+
+  & > * {
+    font-family: inherit;
+  }
+
+  p, li {
+    @include rem(font-size, 16px);
+  }
+}

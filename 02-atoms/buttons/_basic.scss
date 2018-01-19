@@ -1,0 +1,99 @@
+/*=============================================
+=BASIC BUTTON
+=============================================*/
+
+.a-button {
+  cursor: pointer;
+  @include rem(min-width, 100px);
+  display: inline-block;
+  @include rem(margin-top, $space-large);
+  @include rem(margin-bottom, $space-large);
+  transition: all $animate-quick;
+  font-family: $font-family-heading;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  outline: none;
+
+  &:hover {
+    box-shadow: 0 2px 5px $clr-shadow;
+  }
+
+  // Sizes
+  &--xs {
+    @include rem(font-size, $font-size-small);
+    @include rem(padding, $space-small $space);
+  }
+
+  &--md {
+    @include rem(padding, $space $space-large);
+    @include rem(font-size, $font-size-xsmall);
+  }
+
+  &--lg {
+    @include rem(padding, $space + 0.5 $space-xlarge);
+    @include rem(font-size, $font-size-normal);
+  }
+
+  &--xl {
+    @include rem(padding, $space $space-large);
+    @include rem(font-size, $font-size-large);
+  }
+
+  &--full {
+    width: 100%;
+    @include rem(padding, $space-large);
+    @include rem(font-size, $font-size-large);
+  }
+
+  // Colors and styles
+  &--outline {
+    border-radius: $border-radius-md;
+    border: 2px solid $clr-coral;
+    color: $clr-coral;
+  }
+
+  // Type
+  &--primary {
+    @extend .a-button;
+    border-radius: $border-radius-btn;
+    border: 2px solid $clr-coral;
+    background-color: $clr-coral;
+    color: $clr-white;
+
+    &:hover {
+      background-color: $clr-coral;
+      color: $clr-white;
+    }
+  }
+
+  &--secondary {
+    @extend .a-button;
+    border-radius: $border-radius-btn;
+    border: 2px solid $clr-coral;
+    color: $clr-coral;
+
+    &:hover {
+      background-color: $clr-coral;
+      color: $clr-white;
+    }
+  }
+
+  // States
+  &--hide {
+    // visibility: hidden;
+    opacity: 0;
+    transition: all $animate-normal;
+  }
+
+  &--visible {
+    // visibility: visible;
+    opacity: 1;
+    transition: all $animate-normal;
+  }
+
+
+
+
+}

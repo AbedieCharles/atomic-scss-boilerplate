@@ -1,0 +1,28 @@
+// $dir = Direction of gradient
+// $from = Starting color
+// $to = Ending color
+// $width = Border width/thickness
+// $bg-color = mask color
+
+@mixin border-gradient($dir, $from, $to, $width, $bg-color: #FFF) {
+  position: relative;
+  border-width: $width;
+  border-style: solid;
+  border-color: transparent;
+  background-color: $bg-color;
+  background-clip: padding-box;
+  // border-color: $width solid transparent;
+  // background-clip: border-box;
+  // border-image: linear-gradient(to $dir, $from 0%, $to 100%);
+  // border-image-slice: 1;
+
+  &:after {
+    position: absolute;
+    top: #{$width}; bottom: #{$width};
+    left: #{$width}; right: #{$width};
+    background: linear-gradient($from, $to);
+    content: '';
+    z-index: -1;
+    border-radius: $border-radius-btn;
+  }
+}

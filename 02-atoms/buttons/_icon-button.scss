@@ -1,0 +1,38 @@
+/*=============================================
+=ICON BUTTON
+=============================================*/
+$button-icon-size: 40px;
+.a-button--icon {
+  display: block;
+  @include rem(width, $button-icon-size);
+  @include rem(height, $button-icon-size);
+  @include rem(line-height, $button-icon-size);
+  text-align: center;
+  border-radius: 100%;
+  border: 2px solid $clr-black;
+  transition: box-shadow $animate-normal;
+  text-decoration: none;
+  outline: none;
+  color: $clr-black;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $clr-coral;
+    color: $clr-white;
+    border-color: $clr-coral;
+    animation: saegus-pulse $animate-slow;
+  }
+
+  &-white {
+    @extend .a-button--icon;
+    color: $clr-white;
+    border: 2px solid $clr-white;
+  }
+
+  &-flat-coral {
+    @extend .a-button--icon;
+    background-color: $clr-coral;
+    color: $clr-white;
+    border: 2px solid $clr-coral; 
+  }
+}

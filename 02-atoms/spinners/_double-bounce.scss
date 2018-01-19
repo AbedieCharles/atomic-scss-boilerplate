@@ -1,0 +1,37 @@
+/*=============================================
+=SPINNER - DOUBLE BOUNCE
+=============================================*/
+
+/**
+*
+*  <div class="a-spinner--double-bounce">
+*    <span class="a-spinner__item a-spinner__item--one"></span>
+*    <span class="a-spinner__item a-spinner__item--two"></span>
+*  </div>
+*
+*/
+
+.a-spinner--double-bounce {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  position: relative;
+
+  .a-spinner__item {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    border-radius: 100%;
+    background-color: $clr-white;
+    animation: double-bounce 2.0s infinite ease-in-out;
+
+
+    &--two {
+      animation-delay: -1s;
+    }
+
+    &:last-child { margin-right: 0; }
+  }
+}

@@ -1,0 +1,19 @@
+/**
+ * Quotes
+ */
+
+ q {
+	// Sets consistent quote types.
+	quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+blockquote {
+  position: relative;
+  quotes:'\201C''\201D''\2018''\2019';
+  text-align: center;
+  border-left: 2px solid $clr-black;
+  font-family: $font-family-serif;
+  font-style: italic;
+  @include rem(margin, 30px 0);
+  @include rem(padding, 10px 20px);
+}

@@ -1,0 +1,63 @@
+/*=============================================
+=MAIN
+=============================================*/
+.t-main {
+  position: relative;
+  margin-top: 100vh;
+  background-color: $clr-main;
+  z-index: map-get($zindex, main);
+  transition: transform $animate-normal;
+  @include rem(padding-top, $space-xlarge + 4);
+
+
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    @include rem(height, 100px);
+    background: linear-gradient(to top, rgba($clr-black, 0.4) 0%, transparent 90%);
+  }
+
+  &__section-title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    @include rem(margin, 0);
+    position: relative;
+    color: inherit;
+
+    &:after {
+      content: attr(data-step);
+      text-transform: uppercase;
+      @include rem(font-size, 120px);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      right: 0;
+      text-align: center;
+      letter-spacing: 20px;
+      opacity: 0.05;
+    }
+  }
+
+  &__section-subtitle {
+    max-width: (100% / 2);
+    text-align: center;
+    @include rem(margin, 0 auto);
+    position: relative;
+    color: inherit;
+
+    @include MQ(XS) {
+      max-width: 100%;
+    }
+  }
+
+  .a-wrapper:first-child {
+    padding-top: 0;
+  }
+
+}

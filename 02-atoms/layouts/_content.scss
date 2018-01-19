@@ -1,0 +1,29 @@
+/*=============================================
+=LAYOUT CONTENT
+=============================================*/
+.a-content {
+  width: 90%;
+  margin: 0 auto;
+
+  @include MQ(MD) {
+    max-width: $max-width;
+    padding: 0;
+  }
+
+  figure {
+    width: 120% !important;
+    margin: $space-large -5vw;
+  }
+
+  figcaption {
+    font-style: italic;
+    margin: $space 0;
+    text-align: right;
+  }
+}
+
+.sjb-content {
+  header.a-content {
+    @include rem(margin-bottom, $space-large);
+  }
+}

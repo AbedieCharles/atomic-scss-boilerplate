@@ -1,0 +1,51 @@
+
+/*=============================================
+=HELPERS
+=============================================*/
+
+// Layout
+.inline { display: inline }
+.block { display: block }
+.inline-block { display: inline-block }
+.full-width { width: 100%; }
+
+// Overflow
+.overflow-hidden { overflow: hidden }
+.overflow-scroll { overflow: scroll }
+.overflow-auto { overflow: auto }
+
+// Clearing
+.clearfix { clear: both }
+.clear-left { clear: left }
+.clear-right { clear: right }
+
+// Floating
+.float-left { float: left }
+.float-right { float: right }
+
+// Font Display Properties
+.bold { font-weight: bold }
+.regular { font-weight: normal }
+.italic { font-style: italic }
+.uppercase { text-transform: uppercase }
+
+// Text Alignment
+.left-align { text-align: left }
+.center { text-align: center }
+.right-align { text-align: right }
+.justify { text-align: justify }
+
+// White Space
+.nowrap { white-space: nowrap }
+
+// Positions
+.relative { position: relative }
+.absolute { position: absolute }
+.fixed { position: fixed }
+
+// Display & Visibility
+.display-none { display: none }
+.hidden { visibility: hidden }
+.visible { visibility: visible }
+.collapse { visibility: collapse }
+

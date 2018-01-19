@@ -1,0 +1,175 @@
+/*=============================================
+=CARD
+=============================================*/
+$card-height: 400px;
+
+.m-card {
+  transition: all .1s ease-in;
+  background-color: $clr-white;
+  position: relative;
+
+  
+  &:hover {
+    box-shadow: 0 0 10px $clr-shadow;
+  }
+  
+
+  &--overlay {
+    @extend .m-card;
+    @include rem(padding, $space-large);
+    position: relative;
+
+    .m-card__image {
+      width: 70%;
+      display: block;
+      text-align: center;
+      margin: $space-xlarge auto;
+    }
+
+    .m-card__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba($clr-black, 0.4);
+    }
+  }
+
+  &--image {
+    @extend .m-card;
+    background-color: $clr-white;
+    overflow: hidden;
+
+    &:hover {
+      .m-card__actions {
+        transform: translateY(0%);
+      }
+    }
+
+    .m-card__image {
+      @include rem(height, ($card-height / 1.5));
+      @include background-full();
+      overflow: hidden;
+    }
+
+    .m-card__content {
+      @include rem(padding, $space-large);
+      // @include rem(max-height, ($card-height / 2));
+    }
+
+    .m-card__actions {
+      display: flex;
+      justify-content: center;
+      background-color: transparent;
+      color: $clr-white;
+      transform: translateY(100%);
+      transition: transform $animate-normal;
+      @include rem(padding, $space-large $space-large);
+    }
+  }
+
+  // image full width and full height
+  &--full-image {
+    display: block;
+    @extend .m-card;
+    @include rem(height, $card-height);
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    transition: transform $animate-normal;
+
+    &:hover {
+      .m-card__meta {
+        transform: translateY(0%);
+      }
+    }
+
+    .m-card__image {
+      @include rem(height, ($card-height));
+      background-color: lightgrey;
+
+      // Alternative for displaying image
+      @include background-full();
+    }
+
+    .m-card__meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      @include rem(padding, $space-large);
+      z-index: 3;
+      left: 0;
+      right: 0;
+      top: 0;
+      transform: translateY(-100%);
+      transition: transform $animate-normal;
+    }
+
+    .m-card__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: absolute;
+      color: $clr-white;
+      width: 100%;
+      overflow: hidden;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: map-get($zindex, mask ) + 1;
+      @include rem(padding, $space-xlarge $space-large);
+    }
+
+    .m-card__title {
+      margin-bottom: 0;
+    }
+  }
+
+  &--icon {
+    @extend .m-card;
+    @include rem(max-height, $card-height);
+    @include rem(padding, $space $space-large);
+    overflow: hidden;
+    border-radius: $border-radius;
+
+    &:hover {
+      .m-card__actions {
+        transform: translateY(0%);
+      }
+    }
+
+    .m-card__icon {
+      @include rem(width, 60px);
+      @include rem(height, 60px);
+      border-radius: 100%;
+      border: 3px solid $clr-coral;
+    }
+
+    .m-card__content {
+      width: 100%;
+      @include rem(margin, $space-large 0);
+    }
+
+    .m-card__actions {
+      display: flex;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      justify-content: center;
+      // background-color: $clr-coral;
+      color: $clr-white;
+      transform: translateY(100%);
+      transition: transform $animate-normal;
+      @include rem(padding, $space-large $space-large);
+    }
+
+    .m-card__title {
+      line-height: 1;
+      margin-bottom: 0;
+    }
+  }
+}

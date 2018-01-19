@@ -1,0 +1,104 @@
+input:not([type="submit"]) {
+  @include rem(height, $input-size);
+  outline: none;
+  width: 100%;
+  appearance: none;
+  border: none;
+  position: relative;
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+  border-bottom: 2px solid $clr-black;
+  background-color: transparent;
+  font-family: $font-family-sans;
+  color: $clr-black;
+  transition: all $animate-quick;
+
+  &:focus {
+    border-color: $clr-coral;
+  }
+
+  @include placeholder{
+    font-style: italic;
+    color: $clr-black;
+    opacity: 0.2;
+  };
+}
+
+input:not([type="button"]):not([type="checkbox"]):not([type="submit"]):not([type="search"]):not([type="radio"]) {
+  transition: border $animate-quick;
+
+  &[pattern]:focus:valid {
+    & ~ .a-text-field--valid {
+      opacity: 1;
+    }
+  }
+
+  &[pattern]:focus:invalid {
+    & ~ .a-text-field--error {
+      opacity: 1;
+    }
+  }
+
+  &:focus ~ .a-text-field__bar  {
+    transform: scaleX(1);
+  }
+
+  &[pattern]:valid {
+    border-color: $clr-success;
+
+    & ~ .a-text-field--valid {
+      opacity: 1;
+    }
+  }
+
+  &[pattern]:invalid,
+  &:invalid {
+    border-color: $clr-error;
+
+    & ~ .a-text-field--error {
+      opacity: 1;
+    }
+  }
+}
+
+.a-text-field {
+  position: relative;
+  // Text field is valid
+  &--valid,
+  &--error {
+    @include rem(width, $input-size);
+    @include rem(font-size, $font-size-small);
+    font-family: "jam-icons";
+    position: absolute;
+    transform: translateY(-50%);
+    right: 0;
+    text-align: right;
+    top: 70%;
+    opacity: 0;
+    transition: opacity $animate-quick;
+  }
+
+  &--valid {
+    color: $clr-success;
+  }
+
+  &--error {
+    color: $clr-error;
+  }
+
+  // Progress bar animated
+  &__bar {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba($clr-black, 0.1);
+    transform: scaleX(0);
+    transition: transform $animate-normal cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transform-origin: 0% 100%;
+    z-index: map-get($zindex, under);
+  }
+}

@@ -1,0 +1,21 @@
+/*=============================================
+=LAYOUT CONTAINER
+=============================================*/
+.a-container {
+  width: 90%;
+  margin: 0 auto;
+  @include rem(padding, $space-large);
+
+  @include MQ(XS) {
+    padding: 0;
+  }
+
+  @include MQ(MD) {
+    @include rem(width, $container-MD);
+    padding: 0;
+  }
+
+  @include MQ(XL) {
+    @include rem(width, $container-XL);
+  }
+}

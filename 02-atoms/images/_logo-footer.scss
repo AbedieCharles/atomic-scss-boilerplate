@@ -1,0 +1,21 @@
+.a-brand-logo--footer {
+  width: 50%;
+  opacity: 0.2;
+  transition: opacity $animate-normal;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @include MQ(MD) {
+    display: block;
+    width: 70%;
+  }
+
+  // Colors
+  &--white {}
+
+  // Size
+  &--small {}
+
+}

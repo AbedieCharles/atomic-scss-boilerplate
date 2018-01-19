@@ -1,0 +1,89 @@
+b,
+strong {
+  font-weight: 700;
+}
+
+address {
+  font-style: normal;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+a {
+  color: $clr-link;
+	text-decoration: none;
+  position: relative;
+  transition: color $animate-normal;
+	// Removes the gray background color from active links in IE 10.
+  background: transparent;
+  
+
+  &:hover {
+    &:after {
+      height: 100%;
+    }
+  }
+
+	&:hover,
+	&:active,
+	&:focus {
+		text-decoration: none;
+	}
+
+	&:active,
+	&:hover {
+		// Improves readability when focused and also mouse hovered in all browsers.
+		outline: 0;
+	}
+
+	// Increasing the clickable area of inline links inside a paragraph.
+	p & {
+		position: relative;
+		margin: 0;
+    padding: 0 .15em;
+
+    &:hover {
+      color: $clr-white;
+      text-decoration: none;
+    }
+    
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background-color: $clr-link;
+      transition: height $animate-quick;
+      z-index: map-get($zindex, under);
+    }
+	}
+}
+
+em {
+  font-style: italic;
+}
+
+mark {
+  background-color: $clr-coral-lighten;
+}
+
+sub,
+sup {
+	// Prevents `sub` and `sup` affecting `line-height` in all browsers. gist.github.com/413930
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+  @include rem(top, -8px);
+}
+
+sub {
+  @include rem(bottom, -4px);
+}

@@ -1,0 +1,21 @@
+/*=============================================
+=SEARCH
+=============================================*/
+.a-search-wrapper {
+  display: block;
+  position: relative;
+
+  &:after {
+    content: '\e0cc';
+    font-family: "jam-icons";
+    position: absolute;
+    @include rem(width, $input-size);
+    @include rem(line-height, $input-size);
+    @include rem(font-size, $font-size-small);
+    top: 0;
+    pointer-events: none;
+    text-align: right;
+    right: 0;
+    color: $clr-black;
+  }
+}

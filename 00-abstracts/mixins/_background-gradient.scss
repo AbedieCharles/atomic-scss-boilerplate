@@ -1,0 +1,3 @@
+@mixin background-gradient($dir, $from, $to) {
+  background-image: linear-gradient($dir, $from, $to),
+}

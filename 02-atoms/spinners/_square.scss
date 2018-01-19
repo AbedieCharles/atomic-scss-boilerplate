@@ -1,0 +1,49 @@
+/*=============================================
+=SPINNER - SQUARE
+=============================================*/
+
+/**
+*
+*  <div class="a-spinner--square">
+*    <div class="a-spinner__inner"></div>
+*  </div>
+*
+*/
+
+.a-spinner--square {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-color: $clr-white;
+  animation: spinner-square 3s infinite ease-in-out;
+
+  .a-spinner__inner {
+    height: 0%;
+    background-color: $clr-coral;
+    animation: spinner-square-inner 3s infinite ease-in-out;
+  }
+}
+
+@keyframes spinner-square {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  25%, 50% {
+    transform: rotate(180deg);
+  }
+  
+  75%, 100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-square-inner {
+  0%, 25%, 100% {
+    height: 0%;
+  }
+  
+  50%, 75% {
+    height: 100%;
+  }
+}

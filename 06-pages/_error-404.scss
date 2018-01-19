@@ -1,0 +1,16 @@
+/*=============================================
+=PAGE 404
+=============================================*/
+.p-404 {
+  display: flex;
+  @include rem(padding, 0 $space-xxlarge);
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: lightgrey;
+
+  &__illustration,
+  &__content {
+    flex: 1;
+  }
+}

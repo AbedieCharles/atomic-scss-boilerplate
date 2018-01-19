@@ -1,0 +1,31 @@
+/*=============================================
+=LANGUAGE SWITCHER
+=============================================*/
+.m-lang-switcher {
+  @include reset-list();
+  @include rem(margin-right, $space-large);
+  display: flex;
+
+  li,
+  &__item {
+    color: $clr-white;
+    opacity: 0.5;
+    @include rem(margin-right, $space-large);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active,
+    &.current-lang {
+      opacity: 1;
+    }
+  }
+
+  a,
+  &__link {
+    font-family: $font-family-heading;
+    text-transform: uppercase;
+    color: inherit;
+  }
+}

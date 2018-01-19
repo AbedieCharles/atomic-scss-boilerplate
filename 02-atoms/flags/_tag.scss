@@ -1,0 +1,77 @@
+/*=============================================
+=FLAG or TAG category
+=============================================*/
+.a-tag {
+  @include rem(padding, $space-small $space-large);
+  @include rem(font-size, $font-size-small);
+  font-weight: 700;
+  text-align: center;
+  display: inline-flex;
+  border-radius: $border-radius-md;
+  border-style: solid;
+  border-width: 2px;
+  align-items: center;
+
+  i {
+    line-height: 0.5;
+    margin-right: 5px;
+  }
+
+  // Styles
+  &--flat {
+    @extend .a-tag;
+    &-white {
+      @extend .a-tag--flat;
+      background-color: $clr-white;
+      border-color: $clr-white;
+      color: $clr-black;
+    }
+
+    &-coral {
+      @extend .a-tag--flat;
+      background-color: $clr-coral;
+      color: $clr-white;
+      border-color: $clr-coral;
+    }
+
+    &-blue {
+      @extend .a-tag--flat;
+      background-color: $clr-blue;
+      color: $clr-white;
+      border-color: $clr-blue;
+    }
+  }
+  
+  &--outline {
+    @extend .a-tag;
+    background-color: transparent;
+    box-shadow: 0 0 1px rgba($clr-black, 0.5);
+    text-shadow: 0 0 1px rgba($clr-black, 0.5);
+
+    &-white {
+      @extend .a-tag--outline;
+      border-color: $clr-white;
+      color: $clr-white;
+    }
+    
+    &-coral {
+      @extend .a-tag--outline;
+      border-color: $clr-coral;
+      color: $clr-coral;
+    }
+
+    &-blue {
+      @extend .a-tag--outline;
+      border-color: $clr-blue;
+      color: $clr-blue;
+    }
+  }
+
+  &--square {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    line-height: 1;
+    text-align: center;
+  }
+}
