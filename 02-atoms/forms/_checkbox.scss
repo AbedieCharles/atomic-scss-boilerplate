@@ -5,7 +5,7 @@ input[type="checkbox"] {
   appearance: none;
   @include rem(width, $checkbox-size);
   @include rem(height, $checkbox-size);
-  border: 2px solid $clr-blue;
+  border: 2px solid $clr-primary;
   border-radius: $border-radius;
   outline: none;
   cursor: pointer;
@@ -23,13 +23,13 @@ input[type="checkbox"] {
   }
 
   &:hover {
-    border-color: $clr-coral;
+    border-color: $clr-primary;
   }
 
 
   &:checked {
-    border-color: $clr-coral;
-    color: $clr-coral;
+    border-color: $clr-primary;
+    color: $clr-primary;
     animation: pulse $animate-normal;
 
     &:before {

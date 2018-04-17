@@ -45,7 +45,7 @@ a {
     padding: 0 .15em;
 
     &:hover {
-      color: $clr-white;
+      color: $clr-primary;
       text-decoration: none;
     }
     
@@ -68,7 +68,7 @@ em {
 }
 
 mark {
-  background-color: $clr-coral-lighten;
+  background-color: $clr-primary;
 }
 
 sub,

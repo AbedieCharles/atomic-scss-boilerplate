@@ -1,0 +1,39 @@
+/*=============================================
+=TYPOGRAPHY
+=============================================*/
+/* Font faces */
+$typefaces: (
+ 'gilroy-extrabold': (
+   family: 'gil-xtra',
+   weight: 700,
+   style: normal
+ ),
+ 'gilroy-light': (
+   family: 'gil-light',
+   weight: 300,
+   style: normal
+ ),
+ 'jam-icons': (
+   family: 'jam-icons',
+   weight: normal,
+   style: normal
+ )
+);
+
+/* Font Family */
+$font-family-primary: 'gil-xtra';
+$font-family-sans-fallback: 'Arial', sans-serif;
+$font-family-sans: 'Open Sans', 'Helvetica Neue', 'Helvetica', $font-family-sans-fallback;
+$font-family-serif: 'Merriweather', 'Georgia', 'Cambria', 'Times New Roman', 'Times', serif;
+$font-family-heading: $font-family-primary;
+$font-family-display: $font-family-sans;
+$font-family-default: $font-family-sans;
+
+/* Font sizes */
+$font-size-base: 14px;
+$font-size-xsmall: $font-size-base / 1.5;
+$font-size-small: $font-size-base / 1.2;
+$font-size-normal: $font-size-base;
+$font-size-large: $font-size-base * 1.5;
+$font-size-xlarge: $font-size-base * 2.5;
+$font-size-xxlarge: $font-size-base * 3;

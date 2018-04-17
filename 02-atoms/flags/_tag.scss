@@ -22,48 +22,48 @@
     @extend .a-tag;
     &-white {
       @extend .a-tag--flat;
-      background-color: $clr-white;
-      border-color: $clr-white;
-      color: $clr-black;
+      background-color: $clr-primary;
+      border-color: $clr-primary;
+      color: $clr-primary;
     }
 
     &-coral {
       @extend .a-tag--flat;
-      background-color: $clr-coral;
-      color: $clr-white;
-      border-color: $clr-coral;
+      background-color: $clr-primary;
+      color: $clr-primary;
+      border-color: $clr-primary;
     }
 
     &-blue {
       @extend .a-tag--flat;
-      background-color: $clr-blue;
-      color: $clr-white;
-      border-color: $clr-blue;
+      background-color: $clr-primary;
+      color: $clr-primary;
+      border-color: $clr-primary;
     }
   }
   
   &--outline {
     @extend .a-tag;
     background-color: transparent;
-    box-shadow: 0 0 1px rgba($clr-black, 0.5);
-    text-shadow: 0 0 1px rgba($clr-black, 0.5);
+    box-shadow: 0 0 1px rgba($clr-primary, 0.5);
+    text-shadow: 0 0 1px rgba($clr-primary, 0.5);
 
     &-white {
       @extend .a-tag--outline;
-      border-color: $clr-white;
-      color: $clr-white;
+      border-color: $clr-primary;
+      color: $clr-primary;
     }
     
     &-coral {
       @extend .a-tag--outline;
-      border-color: $clr-coral;
-      color: $clr-coral;
+      border-color: $clr-primary;
+      color: $clr-primary;
     }
 
     &-blue {
       @extend .a-tag--outline;
-      border-color: $clr-blue;
-      color: $clr-blue;
+      border-color: $clr-primary;
+      color: $clr-primary;
     }
   }
 

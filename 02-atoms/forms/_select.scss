@@ -9,15 +9,15 @@
     content: '\67';
     font-family: "jam-icons";
     position: absolute;
-    @include rem(width, $input-size);
-    @include rem(line-height, $input-size);
+    @include rem(width, $input-height);
+    @include rem(line-height, $input-height);
     @include rem(font-size, $font-size-small);
     top: 0;
     pointer-events: none;
     right: 0;
     text-align: center;
     height: 100%;
-    color: $clr-black;
+    color: $clr-primary;
   }
 }
 
@@ -25,14 +25,14 @@ select {
   appearance: none;
   width: 100%;
   @include rem(min-width, 100px);
-  @include rem(height, $input-size);
-  @include rem(line-height, $input-size);
+  @include rem(height, $input-height);
+  @include rem(line-height, $input-height);
   border: none;
   outline: none;
   border-radius: 0;
   background-color: transparent;
-  border-bottom: 2px solid $clr-black;
+  border-bottom: 2px solid $clr-primary;
   font-family: $font-family-sans;
-  @include rem(padding, 0 $input-size $space-small 0);
+  @include rem(padding, 0 $input-height $space-small 0);
 }
 

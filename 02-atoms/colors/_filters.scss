@@ -26,7 +26,7 @@
     @extend .a-filter;
 
     &:after {
-      background: linear-gradient(135deg, map-get($grad-coral, 0) 0%, map-get($grad-coral, 50%) 50%);
+      background: linear-gradient(135deg, map-get($gradient-1, 0) 0%, map-get($gradient-1, 50%) 50%);
     }
   }
 
@@ -35,7 +35,7 @@
 
     &:after {
       opacity: 1;
-      background: linear-gradient(to top, $clr-black 0%, transparent 55%);
+      background: linear-gradient(to top, $clr-primary 0%, transparent 55%);
     }
   }
 
@@ -44,7 +44,7 @@
 
     &:after {
       opacity: 0.5;
-      background-color: $clr-black;
+      background-color: $clr-primary;
     }
   }
 

@@ -2,9 +2,9 @@
   @include rem(width, 40px);
   @include rem(height, 40px);
   float: left;
-  color: $clr-coral;
+  color: $clr-primary;
   margin-right: 10px;
-  border: 2px solid $clr-coral;
+  border: 2px solid $clr-primary;
   border-radius: 50%;
   display: flex;
   justify-content: center;

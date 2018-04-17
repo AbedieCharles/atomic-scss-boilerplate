@@ -9,30 +9,30 @@ $button-icon-size: 40px;
   @include rem(line-height, $button-icon-size);
   text-align: center;
   border-radius: 100%;
-  border: 2px solid $clr-black;
+  border: 2px solid $clr-primary;
   transition: box-shadow $animate-normal;
   text-decoration: none;
   outline: none;
-  color: $clr-black;
+  color: $clr-primary;
   cursor: pointer;
 
   &:hover {
-    background-color: $clr-coral;
-    color: $clr-white;
-    border-color: $clr-coral;
+    background-color: $clr-primary;
+    color: $clr-primary;
+    border-color: $clr-primary;
     animation: saegus-pulse $animate-slow;
   }
 
   &-white {
     @extend .a-button--icon;
-    color: $clr-white;
-    border: 2px solid $clr-white;
+    color: $clr-primary;
+    border: 2px solid $clr-primary;
   }
 
   &-flat-coral {
     @extend .a-button--icon;
-    background-color: $clr-coral;
-    color: $clr-white;
-    border: 2px solid $clr-coral; 
+    background-color: $clr-primary;
+    color: $clr-primary;
+    border: 2px solid $clr-primary; 
   }
 }

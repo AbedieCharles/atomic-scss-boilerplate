@@ -2,11 +2,11 @@
 =GRADIENTS
 =============================================*/
 .a-grad--coral {
-  background: linear-gradient(135deg, map-get($grad-coral, 0) 0%, 
-                                      map-get($grad-coral, 50%) 90%);
+  background: linear-gradient(135deg, map-get($gradient-1, 0) 0%, 
+                                      map-get($gradient-1, 50%) 90%);
 }
 
 .a-grad--purple {
-  background: linear-gradient(135deg, map-get($grad-purple, 0) 0%, 
-                                      map-get($grad-purple, 50%) 90%)
+  background: linear-gradient(135deg, map-get($gradient-2, 0) 0%, 
+                                      map-get($gradient-2, 50%) 90%)
 }

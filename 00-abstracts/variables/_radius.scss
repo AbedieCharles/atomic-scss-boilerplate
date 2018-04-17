@@ -1,7 +1,6 @@
 /*=============================================
-=SEARCH (search bar)
+=RADIUS
 =============================================*/
-.m-search {
-  position: relative;
-  @include rem(height, $input-size);
-}
+$border-radius: 6px;
+$border-radius-md: 20px;
+$border-radius-btn: 100px;

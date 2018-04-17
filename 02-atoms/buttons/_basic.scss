@@ -50,33 +50,33 @@
   // Colors and styles
   &--outline {
     border-radius: $border-radius-md;
-    border: 2px solid $clr-coral;
-    color: $clr-coral;
+    border: 2px solid $clr-primary;
+    color: $clr-primary;
   }
 
   // Type
   &--primary {
     @extend .a-button;
     border-radius: $border-radius-btn;
-    border: 2px solid $clr-coral;
-    background-color: $clr-coral;
-    color: $clr-white;
+    border: 2px solid $clr-primary;
+    background-color: $clr-primary;
+    color: $clr-primary;
 
     &:hover {
-      background-color: $clr-coral;
-      color: $clr-white;
+      background-color: $clr-primary;
+      color: $clr-primary;
     }
   }
 
   &--secondary {
     @extend .a-button;
     border-radius: $border-radius-btn;
-    border: 2px solid $clr-coral;
-    color: $clr-coral;
+    border: 2px solid $clr-primary;
+    color: $clr-primary;
 
     &:hover {
-      background-color: $clr-coral;
-      color: $clr-white;
+      background-color: $clr-primary;
+      color: $clr-primary;
     }
   }
 

@@ -10,13 +10,13 @@ body {
   font-family: $font-family-sans;
   line-height: 1.7;
   font-weight: 400;
-  background: $clr-black-lighten;
+  background: #FFF;
   overflow-x: hidden;
   text-size-adjust: 100%;
   @include rem(font-size, $font-size-base);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  color: $clr-black;
+  color: $clr-text;
 }
 
 * {
@@ -33,19 +33,4 @@ body {
 
 *::-webkit-scrollbar-thumb {
 	background-color: #b3b3b3;
-}
-
-@font-face {
-  font-family:'Kungfont';
-  src: url('../fonts/Kungfont.eot');
-src: url('../fonts/Kungfont.eot?#iefix') format('embedded-opentype'),
-  // url('../fonts/Kungfont.woff2') format('woff2'),
-  url('../fonts/Kungfont.woff') format('woff'),
-  url('../fonts/Kungfont.ttf') format('truetype'),
-  // url('../fonts/Kungfont.otf') format('opentype'),
-  url('../fonts/Kungfont.svg#Kungfont') format('svg');
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal;
-  unicode-range: U+0020-007A;
 }

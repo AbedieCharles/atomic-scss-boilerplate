@@ -6,7 +6,7 @@ input[type="radio"] {
   @include rem(width, $radio-size);
   @include rem(height, $radio-size);
   @include rem(line-height, $radio-size);
-  border: 2px solid $clr-blue;
+  border: 2px solid $clr-primary;
   border-radius: 100%;
   outline: none;
   cursor: pointer;
@@ -29,14 +29,14 @@ input[type="radio"] {
   }
 
   &:hover {
-    border-color: $clr-coral;
+    border-color: $clr-primary;
   }
 
   &:checked {
-    border-color: $clr-coral;
+    border-color: $clr-primary;
     animation: pulse $animate-normal;
     &:after {
-      background-color: $clr-coral;
+      background-color: $clr-primary;
     }
   }
 }

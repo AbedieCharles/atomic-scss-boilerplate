@@ -1,5 +1,5 @@
 input:not([type="submit"]) {
-  @include rem(height, $input-size);
+  @include rem(height, $input-height);
   outline: none;
   width: 100%;
   appearance: none;
@@ -8,19 +8,19 @@ input:not([type="submit"]) {
   display: block;
   padding-left: 0;
   padding-right: 0;
-  border-bottom: 2px solid $clr-black;
+  border-bottom: 2px solid $clr-primary;
   background-color: transparent;
   font-family: $font-family-sans;
-  color: $clr-black;
+  color: $clr-primary;
   transition: all $animate-quick;
 
   &:focus {
-    border-color: $clr-coral;
+    border-color: $clr-primary;
   }
 
   @include placeholder{
     font-style: italic;
-    color: $clr-black;
+    color: $clr-primary;
     opacity: 0.2;
   };
 }
@@ -67,7 +67,7 @@ input:not([type="button"]):not([type="checkbox"]):not([type="submit"]):not([type
   // Text field is valid
   &--valid,
   &--error {
-    @include rem(width, $input-size);
+    @include rem(width, $input-height);
     @include rem(font-size, $font-size-small);
     font-family: "jam-icons";
     position: absolute;
@@ -95,7 +95,7 @@ input:not([type="button"]):not([type="checkbox"]):not([type="submit"]):not([type
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba($clr-black, 0.1);
+    background-color: rgba($clr-primary, 0.1);
     transform: scaleX(0);
     transition: transform $animate-normal cubic-bezier(0.445, 0.05, 0.55, 0.95);
     transform-origin: 0% 100%;

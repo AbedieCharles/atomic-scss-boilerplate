@@ -1,6 +1,9 @@
 /*=============================================
-=SUCCESS STORIES
+=LAYOUTS
 =============================================*/
-.a-success-stories {
-  @include rem(padding, $space 0 $space-xxlarge 0);
-}
+
+// Container
+$container-width: (
+  desktop: 1200px,
+  mobile: 90%
+);

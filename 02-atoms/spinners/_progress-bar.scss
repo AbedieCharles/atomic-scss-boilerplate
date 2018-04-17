@@ -2,7 +2,7 @@
 =AVATAR
 =============================================*/
 .a-progress-bar {
-  background-color: rgba($clr-white, 0.5);
+  background-color: rgba($clr-primary, 0.5);
   border-radius: $border-radius-md;
   height: 5px;
 
@@ -17,7 +17,7 @@
     @extend .a-progress-bar;
 
     .a-progress-bar__status {
-      background-color: $clr-white;
+      background-color: $clr-primary;
       border-radius: $border-radius-md;
     }
   }

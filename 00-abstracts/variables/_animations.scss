@@ -1,8 +1,6 @@
 /*=============================================
-=PAGE JOBS
+=ANIMATIONS
 =============================================*/
-.p-jobs {
-  &__introduction {
-    @include rem(margin, $space-large 0)
-  }
-}
+$animate-quick: 0.2s;
+$animate-normal: 0.650s;
+$animate-slow: 2s;

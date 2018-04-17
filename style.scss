@@ -1,4 +1,3 @@
-
 /*=============================================
 =TABLE OF CONTENTS
 =============================================*/
@@ -12,6 +11,14 @@
   * TEMPLATES.................Templates
   * UTILITIES.................Helper classes
   * VENDORS...................Styles out of PL control
+  *
+  * A SAVOIR
+  * Les abstracts, la base, les atoms ainsi que les molécules
+  * peuvent être réutilisés d'un projet à l'autre
+  *
+  * Le CSS contenu dans le dossier vendors permet de surcharger
+  * le css des librairies utilisées
+  *
 */
 
 
@@ -22,14 +29,14 @@
 =============================================*/
 @import '00-abstracts/variables';
 
-// Functions
+/* Functions */
 @import '00-abstracts/functions/strip-unit';
 @import '00-abstracts/functions/parseInt';
 @import '00-abstracts/functions/px';
 @import '00-abstracts/functions/em';
 @import '00-abstracts/functions/rem';
 
-// Mixins
+/* Mixins */
 @import '00-abstracts/mixins/rem';
 @import '00-abstracts/mixins/background-gradient';
 @import '00-abstracts/mixins/text-gradient';
@@ -47,15 +54,6 @@
 
 
 /*=============================================
-=UTILITIES
-=============================================*/
-@import '07-utilities/animations';
-@import '07-utilities/helpers';
-@import '07-utilities/states';
-
-
-
-/*=============================================
 =BASE
 =============================================*/
 @import '01-base/normalize';
@@ -64,11 +62,22 @@
 
 
 
+
 /*=============================================
 =ATOMS
 =============================================*/
 
-// Text
+
+/*
+* Generic
+*/
+
+/* Buttons */
+@import '02-atoms/buttons/basic';
+@import '02-atoms/buttons/icon-button';
+@import '02-atoms/buttons/link-button';
+
+/* Text */
 @import '02-atoms/text/headings';
 @import '02-atoms/text/horizontal-rule';
 @import '02-atoms/text/vertical-rule';
@@ -76,18 +85,7 @@
 @import '02-atoms/text/paragraph';
 @import '02-atoms/text/quote';
 
-// Icons
-@import '02-atoms/icons/svg';
-@import '02-atoms/icons/font-icon';
-@import '02-atoms/icons/mouse-scroll';
-@import '02-atoms/icons/burger-menu';
-
-// Buttons
-@import '02-atoms/buttons/basic';
-@import '02-atoms/buttons/icon-button';
-@import '02-atoms/buttons/link-button';
-
-// Forms
+/* Forms */
 @import '02-atoms/forms/label';
 @import '02-atoms/forms/text-field';
 @import '02-atoms/forms/radio-button';
@@ -97,20 +95,19 @@
 @import '02-atoms/forms/search';
 @import '02-atoms/forms/file';
 
-// Colors
+/* Colors */
 @import '02-atoms/colors/gradients';
 @import '02-atoms/colors/filters';
 
-// images
+/* images */
 @import '02-atoms/images/media';
 @import '02-atoms/images/avatar';
 @import '02-atoms/images/banner';
 @import '02-atoms/images/thumbnail';
 @import '02-atoms/images/rounded';
 @import '02-atoms/images/logo';
-@import '02-atoms/images/logo-footer';
 
-// spinners
+/* spinners */
 @import '02-atoms/spinners/progress-bar';
 @import '02-atoms/spinners/circle';
 @import '02-atoms/spinners/three-bounce';
@@ -118,14 +115,11 @@
 @import '02-atoms/spinners/square';
 @import '02-atoms/spinners/grid';
 
-// Flags
+/* Flags */
 @import '02-atoms/flags/tag';
 
-// Layouts
-@import '02-atoms/layouts/container';
-@import '02-atoms/layouts/content';
-@import '02-atoms/layouts/wrapper';
-@import '02-atoms/layouts/success-stories';
+
+
 
 
 
@@ -133,76 +127,21 @@
 =MOLECULES
 =============================================*/
 
-// Blocks
-@import '03-molecules/blocks/card';
-@import '03-molecules/blocks/hero';
-@import '03-molecules/blocks/media';
-@import '03-molecules/blocks/navbar';
-@import '03-molecules/blocks/banner';
-@import '03-molecules/blocks/video';
-@import '03-molecules/blocks/form';
-@import '03-molecules/blocks/map';
 
-// Forms
-@import '03-molecules/forms/field';
-@import '03-molecules/forms/search';
-@import '03-molecules/forms/group';
 
-// Messaging
-@import '03-molecules/messaging/feedback';
-
-// Navigation
-@import '03-molecules/navigation/lang-switcher';
-@import '03-molecules/navigation/primary';
-@import '03-molecules/navigation/pagination';
-@import '03-molecules/navigation/social';
-@import '03-molecules/navigation/social-share';
-@import '03-molecules/navigation/stretch';
 
 
 /*=============================================
 =ORGANISMS
 =============================================*/
 
-@import '04-organisms/header';
-@import '04-organisms/footer';
-@import '04-organisms/menu';
-@import '04-organisms/modal';
-@import '04-organisms/preloader';
 
-
-// Lists
-@import '04-organisms/lists/default';
-@import '04-organisms/lists/media';
-@import '04-organisms/lists/cards';
-@import '04-organisms/lists/icons';
-
-// Grids
-@import '04-organisms/grids/masonry';
-@import '04-organisms/grids/thumbnail';
-@import '04-organisms/grids/blog';
-
-// Timeline
-@import '04-organisms/timeline/horizontal';
-
-// Carousel
-@import '04-organisms/carousel/basic';
-@import '04-organisms/carousel/card';
-
-// Forms
-@import '04-organisms/forms/contact';
 
 
 
 /*=============================================
 =TEMPLATES
 =============================================*/
-
-@import '05-templates/main';
-@import '05-templates/home';
-@import '05-templates/page';
-@import '05-templates/single';
-
 
 
 
@@ -212,18 +151,17 @@
 =PAGES
 =============================================*/
 
-@import '06-pages/jobs';
-@import '06-pages/error-404';
 
+
+
+/*=============================================
+=UTILITIES
+=============================================*/
+@import '07-utilities/animations';
+@import '07-utilities/helpers';
 
 
 
 /*=============================================
 =VENDORS
 =============================================*/
-@import '08-vendors/jam-icons';
-@import '08-vendors/owl-carousel';
-@import '08-vendors/wp-job-board';
-@import '08-vendors/wp-job-board-form';
-@import '08-vendors/b-lazy';
-@import '08-vendors/contact-form';
